@@ -1,0 +1,241 @@
+{
+	"info": {
+		"_postman_id": "24d39a31-830a-4de1-bfc5-86fd818058d4",
+		"name": "News Data",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21151165",
+		"_collection_link": "https://winter-desert-923701.postman.co/workspace/puredata~d41fbcdc-3a91-4cdc-8268-67debba28471/collection/21151165-24d39a31-830a-4de1-bfc5-86fd818058d4?action=share&source=collection_link&creator=21151165"
+	},
+	"item": [
+		{
+			"name": "News Lists",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-lang-code",
+						"value": "en",
+						"type": "text"
+					},
+					{
+						"key": "x-country-code",
+						"value": "np",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/news",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"news"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "News Create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-lang-code",
+						"value": "en",
+						"type": "text"
+					},
+					{
+						"key": "x-country-code",
+						"value": "np",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "Balen New Movement works",
+							"type": "text"
+						},
+						{
+							"key": "content",
+							"value": "Kathmandu metro works well",
+							"type": "text"
+						},
+						{
+							"key": "country_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "language_id",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "category_id",
+							"value": "3",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/news",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"news"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "News Update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-lang-code",
+						"value": "en",
+						"type": "text"
+					},
+					{
+						"key": "x-country-code",
+						"value": "np",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Updated title\",\r\n  \"content\": \"Updated content\",\r\n  \"country_id\": 2,\r\n  \"language_id\": 2,\r\n  \"category_id\": 2\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/news/101",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"news",
+						"101"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Show News",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-lang-code",
+						"value": "en",
+						"type": "text"
+					},
+					{
+						"key": "x-country-code",
+						"value": "np",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/news/101",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"news",
+						"101"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete News",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-lang-code",
+						"value": "en",
+						"type": "text"
+					},
+					{
+						"key": "x-country-code",
+						"value": "np",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/news/101",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"news",
+						"101"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
