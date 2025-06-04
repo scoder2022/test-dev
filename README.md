@@ -29,3 +29,7 @@ All endpoints require two headers:
 4. Run `php artisan key:generate`
 5. Run migrations: `php artisan migrate`
 6. Start queue worker: `php artisan queue:work`
+
+You can test the API using the included Postman collection.
+
+-   Import the file: `News Data.postman_collection.json` into Postman.
