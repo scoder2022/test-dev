@@ -38,7 +38,6 @@ class NewsController extends Controller
 
     public function store(StorePostRequest $request)
     {
-        $news = News::find(101);
         $news = $this->newsService->create($request->validated());
         return new NewsResource($news);
     }
@@ -75,5 +74,4 @@ class NewsController extends Controller
         $this->newsService->delete($id);
         return response()->json(['message' => 'News Deleted successfully']);
     }
-
 }
